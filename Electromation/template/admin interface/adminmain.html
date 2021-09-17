@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Ashwin | Electricity Board</title>
+    <link rel="stylesheet" href="/static/style/admin interface/adminmain.css">
+    <script src="/static/script/admin interface/adminmain.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col1">
+              <div class="admin-info">
+                  {% for i in Admin_id %}
+                  <h3><font color="white">Admin ID -</font>&nbsp;&nbsp; {{i.username}}</h3>
+                  <h3><font color="white">Email -</font> &nbsp;&nbsp; {{i.email}}</h3>
+                  <h3><font color="white">Phone Number-</font>&nbsp;&nbsp;{{i.phno}}</h3>
+                  {% endfor %}
+                </div>
+                <div class="others">
+                    <button id="add-customer" >Add New Customer</button>
+                </div>
+                <div class="messages">
+                    <hr><br>
+                    <button id="messages"><a href="/adminrecieved"><font color="white">Inbox</font></a></button>
+                </div>
+                <div class="logout">
+                   <a href="{{url_for('adminlogout')}}" id="logout">Logout</a>
+                </div>
+            </div>
+        <div class="col2">
+            <h1 id="head-lines">Electricity Board - Tambaram Administrator </h1><hr>
+            <div class="main-slide">
+            <div class="main-details">
+               <div id="search"><b>Search:</b> <input type="search" onkeyup="Filter()" placeholder="Customer ID" id="search-field"></div>
+            </div><br>
+            <hr>
+            <div class="lists">
+            
+                <ul id="myUl">
+                    {% for i in customer_list %}
+                    <li><h3 id="list-line"><a href="/readingpage/{{i.ebid}}">{{i.ebid}} <br> {{i.name}}</a></h3></li>
+                   {% endfor %}
+                </ul>
+                
+            </div>
+            
+            </div>
+            <div class="footer">
+                Copy Right @Electricity Board Portal 2021
+            </div>
+        </div>
+            
+        <!--Help Center
+            <div class="help-slide">
+               <div class="back-inline"><button id="back" onclick="helponbackclick()">Back</button> <h3 id="help-title">Help Center</h3>
+                </div>
+                <form action="" method="POST">
+                    <input type="email" placeholder="Email" name="Email" id="email"><br>
+                    <textarea name="message" placeholder="Message"></textarea><br>
+                    <input type="submit" id="submit"><input type="reset" id="reset">
+                </form>
+            </div>-->
+            
+        </div>
+    </div>
+</body>
+</html>

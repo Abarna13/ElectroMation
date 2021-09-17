@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome ! {{session.EBID}}</title>
+    <link rel="stylesheet" href="/static/style/customer interface/customermain.css">
+    <script src="/static/script/customer interface/customermain.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col1">
+              <div class="cust-info">
+                  {% for i in Ebid %}
+                  <h3><font color="brown">EB ID -</font>{{i.ebid}}</h3>
+                  <h3><font color="brown">Village-</font>{{i.village}}</h3>
+                  <h3><font color="brown">Address-</font>{{i.address}}</h3>
+                  <h3><font color="brown">Email -</font>{{i.email}}</h3>
+                  <h3><font color="brown">Phone Number-</font>{{i.phno}}</h3>
+                  {% endfor %}
+                </div>
+                <div class="others">
+                    <button id="help" onclick="helponclick()">Help</button>
+                </div>
+                <div class="notification">
+                    <button id="notification"  onclick="notifyclick()">Reply From Board</button>
+                </div>
+
+                <div class="messages">      
+                    {% for k in payment %}
+                    <h2>Inbox</h2><hr>
+                    <textarea id="inbox" readonly>{{k.msg}}</textarea>
+                    {% endfor %}
+                </div>
+                
+                <div class="logout">
+                   <a href="{{url_for('customerlogout')}}" id="logout">Logout</a>
+                </div>
+            </div>
+        <div class="col2">
+            <h1 id="head-lines">Electricity Board - Tambaram</h1><hr>
+            <div class="main-slide">
+            <div class="main-details">
+                {% for i in estimation %}
+               
+                <h2 id="month">Month:&nbsp;&nbsp; {{i.month}}</h2>
+                <h2 id="units">Units:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{i.units}}</h2>
+                <h2 id="amount">Amount:&nbsp;&nbsp;{{i.amount}}</h2>
+                {% endfor %}
+                {% for j in payment %}
+                <h2 id="paymentdate">Last Date for Payment:&nbsp;&nbsp;{{j.date}}</h2>
+                <h3 id="payment">Pay now</h3>
+                {% endfor %}
+            </div><br><br>
+            <hr>
+            <div class="office-info">
+                <h3 id="quote">Save Energy Save Life !</h3>
+                <div id="working">
+                <b>Working Days:</b> Monday to Saturday<br>
+                <b>Working Hours:</b> Morning - 8.00AM to 1.00PM | Evening 1.00PM - 4.00PM<br><br>
+                <b>E-mail:</b> Elecricityboard@gmail.com<br>
+                <b>Phone Number:</b> +91 2122145358
+            </div>
+            </div>
+        </div>
+            
+        <!--Help Center-->
+            <div class="help-slide">
+               <div class="back-inline"><button id="back" onclick="helponbackclick()">Back</button> <h3 id="help-title">Help Center</h3>
+                </div>
+                <form action="/helpcenter" method="POST">
+                    <input type="text" placeholder="EB ID" name="EBID" id="email"><br>
+                    <textarea id="msg-area" name="message" placeholder="Message"></textarea><br>
+                    <input type="submit" id="submit"><input type="reset" id="reset">
+                </form>
+            </div>
+            <!--Help Center-->
+            <div class="notify">
+                {% for i in adminreply %}
+                <ul id="notify-ul">
+                      <li>{{i.msg}}</li>
+                      
+                </ul>
+                {% endfor %}
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>

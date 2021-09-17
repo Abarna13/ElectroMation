@@ -1,0 +1,228 @@
+
+.col1 {
+    float: left;
+    width:350px;
+    padding: 10px;
+    
+    background-color: rgba(56, 173, 52, 0.459);
+    
+    height:710px; /* Should be removed. Only for demonstration */
+   
+   
+  }
+.col2{
+    background-color: white;
+    float: right;
+    width:1133px;
+    height:730px;
+    
+
+    /* Should be removed. Only for demonstration */
+  }
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.admin-info{
+    background-color: rgba(58, 133, 89, 0.562);
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 0 10px rgba(83, 81, 236, 0.199);
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#myUl{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.others{
+    margin-top: 20px;
+}
+#add-customer{
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgba(13, 2, 104, 0.507);
+    height: 50px;
+    color:white;
+    width:350px;
+}
+a{
+    text-decoration: none;
+    
+}
+
+#messages{
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: rgba(19, 19, 56, 0.781);
+    height: 50px;
+    color:white;
+    width:350px;
+}
+
+#head-lines{
+    text-align: center;
+    color: rgb(13, 13, 82);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main-details{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+    font-size: 14px;
+    margin-right: 250px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+#payment{
+    width:200px;
+    height:40px;
+    padding-top: 10px;
+    background-color: rgb(8, 8, 51);
+    margin-left: 150px;
+    color:white;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#payment:hover{
+background-color: rgba(8, 8, 51, 0.658);
+}
+#quote{
+    text-align: center;
+}
+#working{
+    margin-left: 90px;
+}
+.office-info{
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.219);
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.footer{
+    text-align: center;
+    margin-top:20px;
+}
+.help-slide{
+    display: none;
+}
+#help-title{
+    text-align: center;
+    margin-left: 370px;
+}
+#back{
+    width:100px;
+    height: 30px;
+    background-color: gray;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-top: 5px;
+    margin-left:30px;
+    color:white;
+   
+}
+#email{
+    margin-left: 350px;
+    height: 30px;
+    width: 410px;
+    border-color: brown;
+}
+textarea{
+    margin-top: 10px;
+    margin-left: 350px;
+    width:400px;
+    height: 250px;
+    padding: 10px 10px 10px 10px;
+    font-size: 16px;
+    border-color: maroon;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#submit{
+    margin-top: 20px;
+    margin-left: 350px;
+    background-color: green;
+    color:white;
+    width:200px;
+    height: 30px;
+    text-align: center;
+}
+#reset{
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgb(126, 81, 89);
+    color:white;
+    width:200px;
+    height: 30px;
+    text-align: center;
+}
+.back-inline{
+    display: inline-flex;
+}
+.logout{
+    margin-top: 30px;
+    border-radius: 5px;
+    padding-top: 10px;
+    background-color: gray;
+    text-align: center;
+    cursor: pointer;
+    height: 35px;
+    font-size: 18px;
+}
+#logout{
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+#search{
+    margin-left: 55px;
+    margin-top: 20px;
+}
+#search-field{
+
+    border-color: indigo;
+    background-repeat: no-repeat;
+    width: 500px;
+    height:30px;
+    margin-left: 45px;
+    font-size: 16px;
+    padding-left: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+#search-field::placeholder{
+    padding-left: 10px;
+}
+#list-line{
+    cursor: pointer;
+    border-radius: 10px;
+    width:900px;
+    height:80px;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    margin-left: 50px;
+    
+}
+div.lists{
+    background-color: lightblue;
+    width: 1050px;
+    height: 500px;
+    overflow: auto;
+    margin-left: 40px;
+  }

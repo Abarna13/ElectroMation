@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Electricity Board</title>
+        <link rel="stylesheet" type="text/css" href="/static/style/index.css">
+        <script src="/static/script/index.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="header" id="head">
+            <h3 id="title">Electricity Board</h3>
+                <h4 id="customer"><a href="{{url_for('customerlogin')}}">Customer</a></h4>
+                <h4 id="admin"><a href="{{url_for('adminlogin')}}">EB Board</a></h4>
+            
+        </div></header>
+        <div class="main">
+            <div class="col1">
+           <div class="welcome"><h1 id="welcome-title"><font color="indigo">Welcome to Electricity Board Soft Office </font></h1> 
+            <h3 id="head-tag"><font color="green">One Solution that saves power and time</font></h3></div>
+            <hr>
+        </div>
+        <div class="col2" ></div>
+        </div>
+        <div class="about" id="abt">
+            <h1 id="aboutus">About Us</h1>
+            <h3 id="tagline">Portable software for making EB payments, Reading, Commuications more efficiently. Here is the software system will going to reduce all the burden for both customers and board officers.</h3>
+            
+
+        </div>
+        <div class="services">
+            <div class="col3"></div>
+        <div class="col4">
+            <div class="box">
+            <div class="innerbox1">
+                <h2>Automation System</h2>
+               Everything are automatic here from Unit reading from Energy meter to amount calculation to the customer portal.No need anyone to come from electricity board and take reading and estimating the bill. 
+            </div><br>
+            
+            <div class="innerbox2" ><h2>Hands On Information</h2>
+             Check day to day power consuming units and parallel amount through our AutoElectricBoard system which displays units and 
+             amount automatically for initiative to save the energy.
+          </div><br>
+          <div class="innerbox3" ><h2>Message through Mobiles </h2>
+              
+              Can recieve messages even when you out from home through your mobile phones. This will highly helps you to analyze the power consumption when you are not in home. 
+          </div><br>
+          <div class="innerbox3" ><h2>Portal Sytem</h2>
+            Board officers can get the monthly reading without any agent and customer need not to wait to get bill estimation. Through this portal interface customer can recieve the bill estimation along with unit consumption per month.  
+            Customers will recieve notifications through email as well as portals along with payment date.  
+        </div><br>
+        <div class="innerbox3" ><h2>E-Payment</h2>
+           Can pay your bill through online payment those who not comfortable with online payment you can pay through office. Office timings with other informations are mentioned in customers portal itself.
+        </div>
+        <div class="innerbox4" ><h2>Communication made easy</h2>
+           Embedded messaging platform allows both interfaces to chat and clarifying their doubts.
+         </div>
+        </div>
+        </div></div>
+        <div class="freq" id="freq">
+        <div class="Faq">
+            <h1 id="faq-title">Frequently Asked Questions <br><h3 id="faq-tagline">Facing any queries, get it resolved here.</h3></h1>
+        </div>
+        <div class="faq-questions">
+            <div class="questions"> 
+             <div class="q1"><h3 id="query" onclick="answer1()">1. Is this free and safe to use?</h3></div>
+               <h3 id="answer1" onclick="closeing1()">⚡ Yes, it is complete free and highly secure. Only verified people can able to use this portal.</h3>
+               <h3 id="query" onclick="answer2()">2. Why we are using this system ?</h3>
+               <h3 id="answer2" onclick="closeing2()">⚡ To reduce the burden, making comfortable estimation process etc.</h3>
+               <h3 id="query" onclick="answer3()">3. Is there having bi-monthly or monthly estimation?</h3>
+               <h3 id="answer3" onclick="closeing3()">⚡ Obviosly it is the monthly based estimation system if you want bi month procedure, you can pay it bi monthly wise.</h3>
+               <h3 id="query" onclick="answer4()">4. What Electromation device do?</h3>
+               <h3 id="answer4" onclick="closeing4()">⚡ It will displays the day to day units and amount information and sends the message to the customers mobile.</h3>
+               <h3 id="query" onclick="answer5()">5. This electromation is harm to any appliances?</h3>
+               <h3 id="answer5" onclick="closeing5()">⚡No, this device is not any harm to any appliances.</h3>
+           </div>
+        </div>
+        </div> 
+        <div class="contact" id="con">
+            <h1 id="contact-title">Contact Us</h1><h3 id="contact-tagline" >We'd love to hear from you!</h3>
+                
+        </div>
+        <div class="contact-box">
+            <div class="col5">
+         
+            </div>
+            <div class="col6">
+           <div class="form">
+               <form action="/contact" method="POST">
+                  <input placeholder="Your Name" id="name" name="name"> <input placeholder="Your Email" id="email" name="email">
+                  <input placeholder="Subject" id="subject" name="subject"><br>
+                  <textarea name="message">Message</textarea>
+                  <button id="submit" type="submit">Send</button>
+            </form>
+            </div></div>
+        </div>
+        <div class="footer">
+            <div class="footer-box">
+                <div class="col7">
+                     <h2>Powered by Electromation</h2>
+                     <h3>Venkateshwar Nagar, Mangadu,<br>
+                         Chennai 600 122, Tamil Nadu.</h3>
+                     <h3><font color="green">Email:&nbsp;&nbsp;&nbsp;</font><i>Electromation.tech@gmail.com</i></h3>
+                     <h3><font color="green">Mobile:</font><i>7358228847</i></h3>
+
+
+                </div>
+                <div class="col8">
+                  <h2 id="social">Our Social Networks</h2>
+                  <h4 id="social-tagline">Follow us at our Social handles to get all the updates.</h4>
+                  <div class="icons"><i class="fa fa-facebook" id="fb"></i> <i class="fa fa-twitter" id="twitter"></i> <i id="instagram" class="fa fa-instagram"></i> <i id="linkedin" class="fa fa-linkedin"></i></div>
+                </div>
+                <div class="col9">
+                    <h2 id="nav">Navigate</h2>
+                      <div class="list">
+                        <a href="#head" id="nav1"><font color="black"><b>></b></font> Home</a><br><br>
+                        <a href="#abt"  id="nav2"><font color="black"><b>></b></font> About Us</a><br><br>
+                        <a href="#freq"  id="nav3"><font color="black"><b>></b></font> FAQ's</a><br><br>
+                        <a href="#con"  id="nav4"><font color="black"><b>></b></font> Contact Us</a>
+                    </div>
+                    <h3></h3>
+                </div>
+            </div>
+            </div>
+         
+    
+
+
+
+
+        
+
+
+    </body>
+</html>
+
+        
+       
+
+ 

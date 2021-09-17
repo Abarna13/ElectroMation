@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% for i in readings %}
+    <title>{{i.ebid}} | Reading </title>
+    <link rel="stylesheet" href="/static/style/admin interface/adminentry.css">
+    <script src="/static/script/admin interface/adminentry.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col1">
+              <div class="admin-info">
+                  
+            </div>
+            </div>
+        <div class="col2">
+         
+
+            <h3 id="ebid">EB ID - <input type="text" value="{{i.ebid}}" id="text" readonly></h3>
+            
+        
+
+             
+            <div class="main">
+               
+                <h3>Month: <input type="text" id="entry-month" value={{i.month}} readonly></h3>
+                <h3>Units: <input type="text" id="entry-units" value={{i.units}} readonly></h3>
+                <h3>Amount: <input type="text" id="entry-amount" value={{i.amount}} readonly></h3><br>
+                <button onclick="myFunction()" id="copy-button">Copy EB ID</button> 
+               <br>
+               <h3 id="proceed"><a href="{{url_for('proceed')}}">Proceed</a></h3>
+                {% endfor %}
+            </div>
+            </div>
+            
+
+        
+        
+        
+        
+        
+            
+          
+</body>
+</html>
+
+
+
+

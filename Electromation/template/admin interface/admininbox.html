@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Messages | Electricity Board</title>
+    <link rel="stylesheet" href="/static/style/admin interface/admininbox.css">
+    <script src="/static/script/admin interface/admininbox.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div class="col1">
+            <div id="search"><b>Search:</b> <input type="search" onkeyup="Filter()" placeholder="Customer ID" id="search-field"></div>
+              <div class="message-lists">
+                  {% for i in customermessage %}
+                  <ul id="myUl">
+                    <li><h3 id="list-line" onclick="messageclick()"><a href="#">{{i.ebid}}</a></h3></li>
+                </ul>
+                {% endfor %}
+            </div>
+            </div>
+        <div class="col2">
+            {% for j in customermessage %}
+            <h1 id="head-lines">Messages to Administrator </h1><hr>
+            <br>
+            <hr>
+            <div class="default-image"></div>
+            <div class="message-panel">
+               <h3 id="from">Message From <b>{{j.ebid}}</b></h3>
+               <textarea id="msg-area" readonly>{{j.message}}</textarea>
+              
+           
+            <div class="reply-back">
+                <h3 id="reply"><a href="/adminreply/{{j.ebid}}"><font color="white">Reply</font></h3>
+                <h3 id="back" onclick="back()">Back</h3>
+            </div>
+            {% endfor %}
+            </div>
+         </div>
+        </div>
+</body>
+</html>
